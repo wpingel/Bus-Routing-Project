@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js"></script>
+		<meta charset=utf-8 />
+		<title>Welcome to JS Bin</title>
+		<meta name="viewport" content="width=device-width">
+		<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+	</head>
+  
+	<body>
+  
+		<address>
+			Los Primos Mexican Food, 16621 Dove Canyon Road, San Diego, CA 92127
+		</address>
+		
+		<address>
+			8707 Adobe Bluffs Drive, San Diego, CA 92129
+		</address>
+		
+		<address>
+			9225 Adolphia Street, San Diego, CA 92129
+		</address>
+		
+		<? Amazing work from Michael Jasper ?>
+		<script>
+			$(document).ready(function(){
+				$("address").each(function(){                         
+					var embed ="<iframe width='425' height='350' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( $(this).text() ) +"&amp;output=embed'></iframe>";
+					$(this).html(embed);
+				});
+			});
+		</script>
+  
+	</body>
+
+</html>
